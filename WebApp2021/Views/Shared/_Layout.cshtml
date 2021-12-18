@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="es-pe">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+      <div class="bg-mifarma">
+      <img src="~/mifarma-light.svg" />
+      </div>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>                 
+
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      </form>
+   </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <li class="nav-item active dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Categoria
+         </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              @for (int i = 1; i <=  8; i++)
+                                {
+                                          <li><a class="dropdown-item" href="#">@i</a></li>  
+                                }
+         </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  asp-area="" asp-controller="Home" asp-action="Home">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " asp-area="" asp-controller="TipoMedicamento" asp-action="TipoMedicamento">Tipo de Medicamento</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  asp-area="" asp-controller="Sucursal" asp-action="Index">Sucursal</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  asp-area="" asp-controller="Laboratorio" asp-action="Index">Laboratorio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  asp-area="" asp-controller="Usuario" asp-action="Usuario">Usuarios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  asp-area="" asp-controller="Venta" asp-action="Venta">Venta</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  asp-area="" asp-controller="Medicamento" asp-action="Medicamento">Medicamento</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  asp-area="" asp-controller="DetalleMedicamento" asp-action="DetalleMedicamento">DetalleMedicamento</a>
+        </li>
+<<<<<<< HEAD
+        
+=======
+        <li class="nav-item">
+          <a class="nav-link"  asp-area="" asp-controller="Laboratorio" asp-action="Index">El Laboratorio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  asp-area="" asp-controller="Usuario" asp-action="Usuario">Usuarios</a>
+        </li>
+>>>>>>> b0d435beb7a739e0965cb5cdc46a45aee272ac53
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Catalogo del mes</a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">action</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+    </header>
+
+
+
+  
+
+    <input type="hidden" id="hdfOculto" value="@Url.Content("~")" />
+
+
+    @RenderBody()
+
+    @*<script src="~/lib/jquery/dist/jquery.min.js"></script>*@
+
+<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

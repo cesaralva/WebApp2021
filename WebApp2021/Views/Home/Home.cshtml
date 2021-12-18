@@ -1,0 +1,156 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<button type="button" class="btn-close" aria-label="Close"></button>
+
+
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+
+        @{
+            string[] imagenes = { "BANNER_WEB_CUPONERO_DICIEMBRE.jpg", "banner_web_gracias_por_elegirnos_1920x552_mifarma.png", "mifa-Slide-web-Corega.jpg", "mifa-slide-web-Enfagrow-Similac.jpg", "mifa-slide-web-eucerin-lrp.jpg", "mifa-slide-web-Herbal-Elvive.jpg", "mifa-slide-web-Huggies-Babysec.gif", "mifa-slide-web-loreal-garnier.jpg", "mifa-slide-web-regeneradores-de-piel_hidratantes.jpg" };
+            int i = 0;
+
+        }
+        @for (int item = 0; item <= imagenes.Length - 1; item++)
+        {
+            string activado = (item == 0) ? "class=active aria-current=true" : "";
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="@item" @activado aria-label="Slide @item"></button>
+        }
+</div>
+        <div class="carousel-inner">
+
+        @foreach (var imagen in imagenes)
+        {
+            i++;
+
+            string activado = (i == 1) ? "active" : "";
+                <div class="carousel-item @activado">
+                    <img src="~/img/@imagen" class="d-block w-100" alt="...">
+                </div>
+
+
+        }
+        </div>
+
+    @*        @for (int i = 0; i <= 5; i++)
+        {
+        string activado = (i == 0) ? "class='active'" : "";
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="@i" @activado aria-label="Slide @i"></button>
+        }
+        </div>
+        <div class="carousel-inner">
+        @for (int i = 1; i <= 6; i++)
+
+        </div>*@
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+@*<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+    @for (int i = 1; i <= 6; i++)
+    {
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="@i" aria-label="Slide @i"></button>
+    }
+    </div>
+    <div class="carousel-inner">
+    @for (int i = 1; i <= 6; i++)
+    {
+    <div class="carousel-item active">
+    <img src="~/img/@i .jpg" class="d-block w-100" alt="...">
+    </div>
+    }
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+    </button>
+    </div>*@
+
+<div class="container">
+    <div class="row">
+    <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img src="~/img/028884X.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+             <h5 class="card-title">Bolsa de 52 Un</h5>
+             <p class="card-text">Calzoncitos Entrenadores Ninet Talla L - Bolsa 52 UN</p>
+             <p class="card-text"> s/43.90</p>
+             <a href="#" class="btn btn-primary">Agregar al Carrito</a>
+          </div>
+      </div>
+    </div>
+    <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img src="~/img/030280X.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+             <h5 class="card-title">FRASCO 350 ML</h5>
+             <p class="card-text">Aceite para Bebés Ninet - Frasco 350 ML</p>
+             <p class="card-text"> s/43.90</p>
+             <a href="#" class="btn btn-primary">Agregar al Carrito</a>
+          </div>
+      </div>
+    </div>
+    <div class="col">
+            <div class="card" style="width: 18rem;">
+            <img src="~/img/028882X.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                   <h5 class="card-title">Bolsa de 60 Un</h5>
+                   <p class="card-text">Calzoncitos Entrenadores Ninet Talla M - Bolsa 60 UN</p>
+                   <p class="card-text"> s/43.90</p>
+                   <a href="#" class="btn btn-primary">Agregar al Carrito</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img src="~/img/030280X.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+             <h5 class="card-title">FRASCO 350 ML</h5>
+             <p class="card-text">Aceite para Bebés Ninet - Frasco 350 ML</p>
+             <p class="card-text"> s/43.90</p>
+             <a href="#" class="btn btn-primary">Agregar al Carrito</a>
+          </div>
+      </div>
+    </div>
+    <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img src="~/img/030280X.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+             <h5 class="card-title">FRASCO 350 ML</h5>
+             <p class="card-text">Aceite para Bebés Ninet - Frasco 350 ML</p>
+             <p class="card-text"> s/43.90</p>
+             <a href="#" class="btn btn-primary">Agregar al Carrito</a>
+          </div>
+      </div>
+    </div>
+
+   </div>
+</div>
+
+
+
+ <div class="card">
+            <img class="card-img-top" src="">            
+            <div class="card-img-overlay">
+              <h4 class="card-title">Titulo de la tarjeta 1</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sem, 
+                                    tempor vitae mattis malesuada, ornare sed erat. Pellentesque nulla dui, congue
+                                    nec tortor sit amet, maximus mattis dui. </p>
+              <a href="#" class="btn btn-primary">Entrar</a>
+            </div>
+          </div>  
+
